@@ -1,0 +1,39 @@
+{
+    "settings": {
+      "number_of_shards": 1,
+      "number_of_replicas": 1
+    },
+     "mappings": {
+      "dynamic": "true",
+      "_source": {
+        "enabled": "true"
+      },
+      "properties": {
+        "tags": {
+            "type": "keyword"
+        },
+        "requestDescription": {
+            "type": "text"
+        },
+        "description": {
+            "type": "text"
+        },
+        "summary": {
+            "type": "text"
+        },
+        "operationId": {
+          "type": "keyword"
+        },
+        "path": {
+          "type": "keyword"
+        },
+        "httpAction": {
+          "type": "keyword"
+        },
+        "query_vector": {
+          "type": "dense_vector",
+          "dims": 768
+        }
+      }
+    }
+  }
